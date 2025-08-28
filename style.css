@@ -1,0 +1,123 @@
+/* ========================
+   General Styles
+======================== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* ========================
+   Header & Navigation (Flexbox)
+======================== */
+.header {
+  background: #4caf50;
+  color: white;
+  padding: 1em;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  color: white;
+  font-weight: bold;
+}
+
+/* ========================
+   Grid Section
+======================== */
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  padding: 1em;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 2em;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* ========================
+   Flexbox Section
+======================== */
+.flex-section {
+  display: flex;
+  justify-content: space-around;
+  gap: 1em;
+  padding: 1em;
+  background: #eee;
+}
+
+.flex-item {
+  background: #ddd;
+  padding: 2em;
+  flex: 1;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* ========================
+   Footer
+======================== */
+.footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+/* ========================
+   Media Queries (Responsive)
+======================== */
+
+/* Tablet view */
+@media (max-width: 900px) {
+  .grid-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .flex-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .grid-section {
+    grid-template-columns: 1fr;
+  }
+
+  .flex-item {
+    width: 100%;
+  }
+}
